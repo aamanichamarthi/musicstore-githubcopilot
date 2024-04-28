@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header, footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #ddd;
+            padding: 15px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .instrument {
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #fff;
+        }
+        .instrument h2, .instrument p, .instrument span {
+            margin: 0 0 10px 0;
+        }
+        .feedback-form input, .feedback-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Classical Western Musical Instruments Store</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="instrument">
+            <h2>Instrument Name</h2>
+            <p>Description about the instrument.</p>
+            <span>Price: $100</span>
+        </div>
+        <!-- Repeat the above div for each instrument -->
+    </div>
+    <div class="container">
+        <h2>Feedback</h2>
+        <form class="feedback-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Feedback" required></textarea>
+            <input type="submit" value="Submit Feedback">
+        </form>
+    </div>
+    <footer>
+        <p>© 2022 Classical Western Musical Instruments Store</p>
+    </footer>
+    <script>
+        document.querySelector('.feedback-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your feedback!');
+        });
+    </script>
+</body>
+</html>
